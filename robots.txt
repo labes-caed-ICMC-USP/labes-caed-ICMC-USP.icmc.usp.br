@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap (URL absoluta exigida pelos buscadores)
-Sitemap: https://labes-caed-icmc-usp.github.io/sitemap.xml
+Sitemap: https://www.labes.icmc.usp.br/sitemap.xml

@@ -55,8 +55,8 @@
           "</div>" +
           '<div class="col-lg-3 col-md-3 footer-links">' +
             '<div class="footer-contact pt-3">' +
-              '<p class="mt-3"><strong>Phone:</strong> <span>' + data.footer.telefone + "</span></p>" +
-              "<p><strong>Email:</strong> <span>" + data.footer.email + "</span></p>" +
+              '<p class="mt-3"><strong>Telefone:</strong> <span>' + data.footer.telefone + "</span></p>" +
+              "<p><strong>E-mail:</strong> <span>" + data.footer.email + "</span></p>" +
             "</div>" +
           "</div>" +
           '<div class="col-lg-3 col-md-3 footer-links">' +
@@ -70,7 +70,7 @@
         "</div>" +
       "</div>" +
       '<div class="container copyright text-center mt-4">' +
-        "<p>&copy; <span>Copyright</span> <strong class=\"px-1 sitename\">LabES</strong> <span>All Rights Reserved</span></p>" +
+        "<p>&copy; <strong class=\"px-1 sitename\">LabES</strong> <span>Todos os direitos reservados</span></p>" +
         '<div class="credits">' +
           'Designed by <a href="' + data.footer.creditos.github + '">LabES</a> | Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>' +
         "</div>" +

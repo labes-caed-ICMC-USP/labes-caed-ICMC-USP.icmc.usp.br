@@ -12,9 +12,9 @@
       "href": "https://www.icmc.usp.br/pos-graduacao/ppgccmc/ingresso"
     },
     "galeria": [
-      { "src": "assets/img/education/bloco6.jpg",    "alt": "Campus Life", "legenda": "Campus Moderno",        "tamanho": "large" },
-      { "src": "assets/img/education/labes-sala1.jpg","alt": "Students",    "legenda": "Vida Estudantil",      "tamanho": "small" },
-      { "src": "assets/img/education/labes-sala2.png","alt": "Faculty",     "legenda": "Ambiente Colaborativo","tamanho": "small" }
+      { "src": "/assets/img/education/bloco6.jpg",    "alt": "Campus Life", "legenda": "Campus Moderno",        "tamanho": "large" },
+      { "src": "/assets/img/education/labes-sala1.jpg","alt": "Students",    "legenda": "Vida Estudantil",      "tamanho": "small" },
+      { "src": "/assets/img/education/labes-sala2.png","alt": "Faculty",     "legenda": "Ambiente Colaborativo","tamanho": "small" }
     ]
   },
   "historia": {
@@ -44,7 +44,7 @@
       }
     ],
     "imagem": {
-      "src": "assets/img/reencontro-labes.png",
+      "src": "/assets/img/reencontro-labes.png",
       "alt": "Atividade institucional do laboratório"
     },
     "missao": {
@@ -62,7 +62,7 @@
     "descricao": "O Laboratório de Engenharia de Software promove um ambiente colaborativo de aprendizagem, reunindo estudantes que participam tanto de forma presencial quanto online. O espaço estimula a troca de experiências, o desenvolvimento técnico e o fortalecimento da comunidade acadêmica.",
     "estudantesAtivos": 50,
     "imagem": {
-      "src": "assets/img/education/labes-sala2.png",
+      "src": "/assets/img/education/labes-sala2.png",
       "alt": "Student Life"
     },
     "infoGrid": [
@@ -78,26 +78,26 @@
       }
     ],
     "destaque": {
-      "src": "assets/img/education/encontro.jpeg",
+      "src": "/assets/img/education/encontro.jpeg",
       "alt": "Encontro acadêmico no laboratório",
       "titulo": "Convivência Acadêmica",
       "descricao": "Encontros presenciais e remotos que promovem a integração entre estudantes, docentes e pesquisadores, fortalecendo o ambiente colaborativo e o intercâmbio de experiências acadêmicas."
     },
     "atividades": [
       {
-        "src": "assets/img/education/encontro2.png",
+        "src": "/assets/img/education/encontro2.png",
         "alt": "Atividades de pesquisa",
         "titulo": "Atividades de Pesquisa",
         "descricao": "Participação ativa dos estudantes em projetos científicos, grupos de estudo e discussões técnicas relacionadas à Engenharia de Software."
       },
       {
-        "src": "assets/img/education/labes-sala1.jpg",
+        "src": "/assets/img/education/labes-sala1.jpg",
         "alt": "Ambiente de estudo no laboratório",
         "titulo": "Ambiente Colaborativo",
         "descricao": "Espaços compartilhados que incentivam o trabalho em equipe, a troca de conhecimento e o desenvolvimento acadêmico e profissional."
       },
       {
-        "src": "assets/img/education/festa-junina.png",
+        "src": "/assets/img/education/festa-junina.png",
         "alt": "Atividade de integração social",
         "titulo": "Integração Social",
         "descricao": "Atividades culturais e comemorativas que fortalecem os vínculos entre os membros do laboratório."
@@ -112,7 +112,7 @@
       "A visão do ICMC é tornar-se uma referência mundial em ensino e pesquisa, contribuindo decisivamente para a evolução do conhecimento em suas áreas de atuação, formando recursos humanos de alto nível e apoiando o desenvolvimento científico, tecnológico e social da região, do estado e do país."
     ],
     "imagem": {
-      "src": "assets/img/education/icone-noticia.jpg",
+      "src": "/assets/img/education/icone-noticia.jpg",
       "alt": "Education"
     },
     "badge": "Excelência Comprovada"

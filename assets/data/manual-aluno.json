@@ -2,7 +2,7 @@
   "comoIngressar": {
     "titulo": "Como ingressar no LabES",
     "imagem": {
-      "src": "assets/img/education/bloco6.jpg",
+      "src": "/assets/img/education/bloco6.jpg",
       "alt": "Campus Life"
     },
     "paragrafos": [
@@ -19,27 +19,27 @@
     "titulo": "Infraestrutura",
     "itens": [
       {
-        "img": "assets/img/education/labes-sala1.jpg",
+        "img": "/assets/img/education/labes-sala1.jpg",
         "alt": "Laboratório LabES",
         "titulo": "Laboratório LabES",
         "descricao": "Espaço físico exclusivo para pesquisadores e alunos do grupo, localizado na <strong>sala 6-204</strong>."
       },
       {
-        "img": "assets/img/student-life/restaurante-universitario.jpg",
+        "img": "/assets/img/student-life/restaurante-universitario.jpg",
         "alt": "Restaurante Universitário",
         "titulo": "Restaurante Universitário",
         "descricao": "Acesso a refeições balanceadas no Restaurante Universitário com cardápio diário online.",
         "link": "https://prefeitura.sc.usp.br/cardapio/"
       },
       {
-        "img": "assets/img/student-life/biblioteca.png",
+        "img": "/assets/img/student-life/biblioteca.png",
         "alt": "Biblioteca ICMC",
         "titulo": "Biblioteca",
         "descricao": "Vasto acervo bibliográfico, salas de estudo individual e em grupo, além de base de dados digital.",
         "link": "https://www.icmc.usp.br/institucional/estrutura-administrativa/biblioteca/"
       },
       {
-        "img": "assets/img/student-life/cefer.png",
+        "img": "/assets/img/student-life/cefer.png",
         "alt": "CEFER",
         "titulo": "CEFER",
         "descricao": "Centro de Educação Física e Esportes com quadras, piscina e academia para a comunidade USP.",

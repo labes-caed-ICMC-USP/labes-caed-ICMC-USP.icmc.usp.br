@@ -2,7 +2,7 @@
   {
     "id": "adenilso-simao",
     "nome": "Adenilso da Silva Simão",
-    "foto": "assets/img/orientadores/adenilso-da-silva-simao.png",
+    "foto": "/assets/img/orientadores/adenilso-da-silva-simao.png",
     "email": "adenilso@icmc.usp.br",
     "site": "https://sites.icmc.usp.br/adenilso/",
     "lattes": "http://lattes.cnpq.br/9836776931160228",
@@ -23,7 +23,7 @@
   {
     "id": "marcio-eduardo-delamaro",
     "nome": "Márcio Eduardo Delamaro",
-    "foto": "assets/img/orientadores/marcio-eduardo-delamaro.png",
+    "foto": "/assets/img/orientadores/marcio-eduardo-delamaro.png",
     "email": "delamaro@icmc.usp.br",
     "site": "https://sites.icmc.usp.br/delamaro/",
     "lattes": "http://lattes.cnpq.br/2844974351441051",
@@ -45,7 +45,7 @@
   {
     "id": "jose-carlos-maldonado",
     "nome": "José Carlos Maldonado",
-    "foto": "assets/img/orientadores/jose-carlos-maldonado.png",
+    "foto": "/assets/img/orientadores/jose-carlos-maldonado.png",
     "email": "jcmaldon@icmc.usp.br",
     "site": "https://www.icmc.usp.br/pessoas?id=172107",
     "lattes": "http://lattes.cnpq.br/8807333466702951",
@@ -72,7 +72,7 @@
   {
     "id": "elisa-yumi-nakagawa",
     "nome": "Elisa Yumi Nakagawa",
-    "foto": "assets/img/orientadores/elisa-yumi-nakagawa.png",
+    "foto": "/assets/img/orientadores/elisa-yumi-nakagawa.png",
     "email": "elisa@icmc.usp.br",
     "site": "https://sites.icmc.usp.br/elisa/",
     "lattes": "http://lattes.cnpq.br/7494142007764616",
@@ -103,7 +103,7 @@
   {
     "id": "ellen-francine-barbosa",
     "nome": "Ellen Francine Barbosa",
-    "foto": "assets/img/orientadores/ellen-francine-barbosa.png",
+    "foto": "/assets/img/orientadores/ellen-francine-barbosa.png",
     "email": "francine@icmc.usp.br",
     "site": "https://www.icmc.usp.br/pessoas?id=4325299",
     "lattes": "http://lattes.cnpq.br/7913302545613108",
@@ -132,7 +132,7 @@
   {
     "id": "simone-do-rocio-senger-de-souza",
     "nome": "Simone do Rocio Senger de Souza",
-    "foto": "assets/img/orientadores/simone-do-rocio-senger-de-souza.png",
+    "foto": "/assets/img/orientadores/simone-do-rocio-senger-de-souza.png",
     "email": "srocio@icmc.usp.br",
     "site": "https://www.icmc.usp.br/pessoas?id=3685313",
     "lattes": "http://lattes.cnpq.br/7137178343756327",
@@ -157,7 +157,7 @@
   {
     "id": "lina-garces",
     "nome": "Lina Maria Garcés Rodriguez",
-    "foto": "assets/img/orientadores/lina-garces.png",
+    "foto": "/assets/img/orientadores/lina-garces.png",
     "email": "linagarces@usp.br",
     "site": "https://icmc.usp.br/pessoas?id=16856723",
     "lattes": "http://lattes.cnpq.br/3525510258366155",
