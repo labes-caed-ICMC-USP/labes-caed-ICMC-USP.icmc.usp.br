@@ -1,0 +1,12 @@
+{
+  "titulo": "CAEd",
+  "paragrafos": [
+    "O desenvolvimento de novas tecnologias computacionais transformou o cenário educacional, atuando como elemento motivador no ensino presencial, híbrido e a distância.",
+    "Neste cenário, o <strong>Laboratório de Computação Aplicada à Educação e Tecnologia Social Avançada (CAEd)</strong>, fundado em 2012 pela Profa. Dra. Ellen Francine Barbosa, foca na pesquisa e disseminação de tecnologias que permitem a construção ativa do conhecimento. Saiba mais em <a href=\"http://caed.icmc.usp.br/\" target=\"_blank\">caed.icmc.usp.br</a>.",
+    "O CAEd contribui com a sociedade através de métodos inovadores que vão do ensino fundamental ao universitário, beneficiando áreas como Computação, Matemática e Engenharia."
+  ],
+  "imagem": {
+    "src": "assets/img/education/caed.png",
+    "alt": "CAEd"
+  }
+}

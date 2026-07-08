@@ -1,0 +1,73 @@
+{
+  "comoIngressar": {
+    "titulo": "Como ingressar no LabES",
+    "imagem": {
+      "src": "assets/img/education/bloco6.jpg",
+      "alt": "Campus Life"
+    },
+    "paragrafos": [
+      "O <strong>LabES (Laboratório de Engenharia de Software)</strong> está sempre em busca de mentes curiosas e dedicadas para contribuir com nossas pesquisas de ponta. Seja você um aluno de graduação dando seus primeiros passos na ciência ou um pesquisador experiente, há um espaço para você colaborar conosco.",
+      "<strong>Iniciação Científica (IC):</strong> Se você é aluno de graduação e quer se aprofundar em Engenharia de Software, o caminho é via IC. Explore nossas <a href=\"https://www.icmc.usp.br/pesquisa/grupos/?lab=19\" target=\"_blank\">linhas de pesquisa</a>, identifique o tema que mais te desperta interesse e <strong>entre em contato diretamente com um de nossos professores</strong> para verificar a disponibilidade de orientação.",
+      "<strong>Mestrado, Doutorado e Pós-Doc:</strong> Para pesquisadores de pós-graduação, o ingresso ocorre através dos processos seletivos do Programa de Pós-Graduação em Ciências da Computação e Matemática Computacional (PPGCCMC). Confira os editais vigentes e os requisitos de admissão no portal oficial."
+    ],
+    "cta": {
+      "label": "Ingresso na Pós-Graduação",
+      "href": "https://www.icmc.usp.br/pos-graduacao/ppgccmc/ingresso"
+    }
+  },
+  "infraestrutura": {
+    "titulo": "Infraestrutura",
+    "itens": [
+      {
+        "img": "assets/img/education/labes-sala1.jpg",
+        "alt": "Laboratório LabES",
+        "titulo": "Laboratório LabES",
+        "descricao": "Espaço físico exclusivo para pesquisadores e alunos do grupo, localizado na <strong>sala 6-204</strong>."
+      },
+      {
+        "img": "assets/img/student-life/restaurante-universitario.jpg",
+        "alt": "Restaurante Universitário",
+        "titulo": "Restaurante Universitário",
+        "descricao": "Acesso a refeições balanceadas no Restaurante Universitário com cardápio diário online.",
+        "link": "https://prefeitura.sc.usp.br/cardapio/"
+      },
+      {
+        "img": "assets/img/student-life/biblioteca.png",
+        "alt": "Biblioteca ICMC",
+        "titulo": "Biblioteca",
+        "descricao": "Vasto acervo bibliográfico, salas de estudo individual e em grupo, além de base de dados digital.",
+        "link": "https://www.icmc.usp.br/institucional/estrutura-administrativa/biblioteca/"
+      },
+      {
+        "img": "assets/img/student-life/cefer.png",
+        "alt": "CEFER",
+        "titulo": "CEFER",
+        "descricao": "Centro de Educação Física e Esportes com quadras, piscina e academia para a comunidade USP.",
+        "link": "https://saocarlos.usp.br/tag/cefer/"
+      }
+    ]
+  },
+  "servicos": {
+    "titulo": "Serviços e Apoio ao Estudante",
+    "itens": [
+      {
+        "icone": "bi-house-door",
+        "titulo": "Permanência Estudantil",
+        "descricao": "Informações sobre transporte interno, auxílio-moradia e gestão dos restaurantes universitários do campus.",
+        "link": "https://prefeitura.sc.usp.br/transporte-alimentacao-e-moradia/"
+      },
+      {
+        "icone": "bi-cash-stack",
+        "titulo": "Bolsas e Auxílios",
+        "descricao": "Programas de bolsas de graduação, auxílio socioeconômico e suporte financeiro para permanência na universidade.",
+        "link": "https://prefeitura.sc.usp.br/bolsas-e-auxilios/"
+      },
+      {
+        "icone": "bi-heart-pulse",
+        "titulo": "Saúde Mental",
+        "descricao": "Apoio psicológico e programas de acolhimento para garantir o bem-estar emocional durante a jornada acadêmica.",
+        "link": "https://prefeitura.sc.usp.br/saude-mental/"
+      }
+    ]
+  }
+}

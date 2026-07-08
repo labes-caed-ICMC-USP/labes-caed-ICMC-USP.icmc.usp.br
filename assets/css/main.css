@@ -811,8 +811,7 @@ section,
   }
 }
 
-.hero .hero-wrapper .hero-content h1,
-.hero .hero-wrapper .hero-content h2 {
+.hero .hero-wrapper .hero-content h1 {
   font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -820,15 +819,13 @@ section,
 }
 
 @media (max-width: 992px) {
-  .hero .hero-wrapper .hero-content h1,
-  .hero .hero-wrapper .hero-content h2 {
+  .hero .hero-wrapper .hero-content h1 {
     font-size: 2.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .hero .hero-wrapper .hero-content h1,
-  .hero .hero-wrapper .hero-content h2 {
+  .hero .hero-wrapper .hero-content h1 {
     font-size: 2rem;
   }
 }
@@ -5294,6 +5291,46 @@ section,
   .orientador-profile-content h2 {
     font-size: 1.55rem;
   }
+}
+
+/*--------------------------------------------------------------
+# Orientadores Históricos Section
+--------------------------------------------------------------*/
+.orientador-card-historico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 8px;
+  background: var(--surface-color);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.orientador-card-historico:hover,
+.orientador-card-historico:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.orientador-photo-historico {
+  width: 80px;
+  height: 80px;
+  font-size: 1.1rem;
+  opacity: 0.75;
+}
+
+.orientador-historico-nome {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  line-height: 1.3;
 }
 
 /*--------------------------------------------------------------
