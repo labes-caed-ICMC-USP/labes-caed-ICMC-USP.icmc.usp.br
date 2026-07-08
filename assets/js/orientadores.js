@@ -1,16 +1,16 @@
 (function() {
   "use strict";
 
-  // Este script s\u00f3 \u00e9 carregado pelas p\u00e1ginas /orientadores/ e /orientador/,
-  // ambas em pastas (profundidade 1), por isso os caminhos usam "../".
-  const ASSET_PREFIX = "../";
-  const DATA_URL = ASSET_PREFIX + "assets/data/orientadores.json";
+  const DATA_URL = "/assets/data/orientadores.json";
+  const INACTIVE_DATA_URL = "/assets/data/orientadores-inativos.json";
   const EMPTY_PROFILE_MESSAGE = "Nenhuma informa\u00e7\u00e3o complementar cadastrada.";
   const RESEARCH_SUBLINE_PREFIX = "-- ";
   const ACTION_ICON_PATHS = {
-    email: ASSET_PREFIX + "assets/img/icons/logo-email.png",
-    site: ASSET_PREFIX + "assets/img/icons/logo-site.png",
-    lattes: ASSET_PREFIX + "assets/img/icons/logo-curriculo.png"
+    email: "/assets/img/icons/logo-email.png",
+    site: "/assets/img/icons/logo-site.png",
+    lattes: "/assets/img/icons/logo-curriculo.png",
+    linkedin: "/assets/img/icons/logo-linkedin.svg",
+    orcid: "/assets/img/icons/logo-orcid.svg"
   };
 
   function hasValue(value) {
@@ -61,12 +61,8 @@
       return wrapper;
     }
 
-    // O JSON guarda o caminho relativo "assets/..."; como esta página fica em
-    // uma pasta (profundidade 1), normalizamos para "../assets/...".
-    const fotoSrc = /^assets\//.test(foto) ? ASSET_PREFIX + foto : foto;
-
     const image = document.createElement("img");
-    image.src = fotoSrc;
+    image.src = foto;
     image.alt = `Foto de ${normalizedText(orientador.nome)}`;
     image.loading = "lazy";
 
@@ -79,7 +75,7 @@
   }
 
   function profileUrl(orientador) {
-    return `../orientador/?id=${encodeURIComponent(normalizedText(orientador.id))}`;
+    return `/orientador/?id=${encodeURIComponent(normalizedText(orientador.id))}`;
   }
 
   function emailUrl(email) {
@@ -122,8 +118,10 @@
 
     if (hasValue(orientador.linkedin)) {
       links.push({
+        key: "linkedin",
         label: "LinkedIn",
         url: normalizedText(orientador.linkedin),
+        image: ACTION_ICON_PATHS.linkedin,
         icon: "bi-linkedin"
       });
     }
@@ -138,8 +136,10 @@
 
     if (hasValue(orientador.orcid)) {
       links.push({
+        key: "orcid",
         label: "ORCID",
         url: normalizedText(orientador.orcid),
+        image: ACTION_ICON_PATHS.orcid,
         icon: "bi-person-badge"
       });
     }
@@ -188,10 +188,6 @@
       } else {
         const icon = createElement("i", `bi ${link.icon}`);
         anchor.appendChild(icon);
-      }
-
-      if (mode === "profile" && !hasValue(link.image)) {
-        anchor.appendChild(createElement("span", "orientador-action-text", link.label));
       }
 
       actions.appendChild(anchor);
@@ -335,6 +331,58 @@
     });
   }
 
+  function renderInactiveList(orientadores) {
+    const list = document.querySelector("#orientadores-inativos-list");
+    const status = document.querySelector("#orientadores-inativos-status");
+
+    if (!list) {
+      return;
+    }
+
+    list.replaceChildren();
+
+    if (!Array.isArray(orientadores) || orientadores.length === 0) {
+      setStatus(status, "");
+      return;
+    }
+
+    setStatus(status, "");
+
+    orientadores.forEach((orientador, index) => {
+      const column = createElement("div", "col-lg-2 col-md-3 col-4");
+      column.setAttribute("data-aos", "fade-up");
+      column.setAttribute("data-aos-delay", String(100 + index * 50));
+
+      const card = createElement("article", "orientador-card-historico");
+      card.tabIndex = 0;
+      card.dataset.profileUrl = profileUrl(orientador);
+      card.setAttribute("aria-label", `Ver mais sobre ${normalizedText(orientador.nome)}`);
+
+      card.addEventListener("click", event => {
+        if (event.target.closest("a, button")) {
+          return;
+        }
+        window.location.href = card.dataset.profileUrl;
+      });
+
+      card.addEventListener("keydown", event => {
+        if (event.target.closest("a, button")) {
+          return;
+        }
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          window.location.href = card.dataset.profileUrl;
+        }
+      });
+
+      card.appendChild(createPhoto(orientador, "orientador-photo-historico"));
+      card.appendChild(createElement("p", "orientador-historico-nome", normalizedText(orientador.nome)));
+
+      column.appendChild(card);
+      list.appendChild(column);
+    });
+  }
+
   function createInfoBlock(title, iconClass, content) {
     if (!hasValue(content)) {
       return null;
@@ -350,35 +398,6 @@
     block.appendChild(paragraph);
 
     return block;
-  }
-
-  function setMetaContent(selector, value) {
-    const element = document.querySelector(selector);
-
-    if (element) {
-      element.setAttribute("content", value);
-    }
-  }
-
-  function updateProfileMetadata(nome, orientador) {
-    const url = window.location.href;
-    const title = `${nome} - LabES`;
-    const descricaoBase = normalizedText(orientador.descricao);
-    const description = descricaoBase
-      ? descricaoBase.slice(0, 160).trim()
-      : `Perfil de ${nome}, orientador(a) do Laboratório de Engenharia de Software (LabES) do ICMC-USP.`;
-
-    const canonical = document.querySelector("#canonical-link");
-    if (canonical) {
-      canonical.setAttribute("href", url);
-    }
-
-    setMetaContent('meta[name="description"]', description);
-    setMetaContent("#og-title", title);
-    setMetaContent("#twitter-title", title);
-    setMetaContent("#og-description", description);
-    setMetaContent("#twitter-description", description);
-    setMetaContent("#og-url", url);
   }
 
   function renderProfile(orientadores) {
@@ -409,7 +428,6 @@
     const breadcrumb = document.querySelector("#orientador-breadcrumb");
 
     document.title = `${nome} - LabES`;
-    updateProfileMetadata(nome, orientador);
 
     if (pageTitle) {
       pageTitle.textContent = nome;
@@ -423,7 +441,8 @@
     hero.appendChild(createPhoto(orientador, "orientador-photo-profile"));
 
     const heroContent = createElement("div", "orientador-profile-content");
-    heroContent.appendChild(createElement("p", "orientador-profile-kicker", "Orientador LabES"));
+    const kickerText = orientador.tipo === "historico" ? "Docente Histórico LabES" : "Orientador LabES";
+    heroContent.appendChild(createElement("p", "orientador-profile-kicker", kickerText));
     heroContent.appendChild(createElement("h2", "", nome));
 
     const actions = createActionLinks(orientador, "profile");
@@ -485,7 +504,7 @@
     profile.appendChild(details);
 
     const backLink = createElement("a", "orientador-back-link", "Voltar para orientadores");
-    backLink.href = "../orientadores/";
+    backLink.href = "/orientadores/";
     backLink.prepend(createElement("i", "bi bi-arrow-left-short"));
     profile.appendChild(backLink);
   }
@@ -496,31 +515,48 @@
     }
   }
 
+  function loadJSON(url) {
+    return fetch(url).then(response => {
+      if (!response.ok) {
+        throw new Error("N\u00e3o foi poss\u00edvel carregar " + url);
+      }
+      return response.json();
+    });
+  }
+
   function init() {
     const hasOrientadoresList = document.querySelector("#orientadores-list");
     const hasOrientadorProfile = document.querySelector("#orientador-profile");
+    const hasInativosList = document.querySelector("#orientadores-inativos-list");
 
-    if (!hasOrientadoresList && !hasOrientadorProfile) {
+    if (!hasOrientadoresList && !hasOrientadorProfile && !hasInativosList) {
       return;
     }
 
-    fetch(DATA_URL)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("N\u00e3o foi poss\u00edvel carregar os dados dos orientadores.");
-        }
-
-        return response.json();
-      })
-      .then(orientadores => {
-        renderList(orientadores);
-        renderProfile(orientadores);
+    if (hasOrientadorProfile) {
+      Promise.all([
+        loadJSON(DATA_URL).catch(() => []),
+        loadJSON(INACTIVE_DATA_URL).catch(() => [])
+      ]).then(([ativos, inativos]) => {
+        renderProfile([...ativos, ...inativos]);
         refreshAnimations();
-      })
-      .catch(error => {
-        setStatus(document.querySelector("#orientadores-status"), error.message, true);
+      }).catch(error => {
         setStatus(document.querySelector("#orientador-status"), error.message, true);
       });
+      return;
+    }
+
+    const p1 = loadJSON(DATA_URL)
+      .then(orientadores => renderList(orientadores))
+      .catch(error => setStatus(document.querySelector("#orientadores-status"), error.message, true));
+
+    const p2 = hasInativosList
+      ? loadJSON(INACTIVE_DATA_URL)
+          .then(inativos => renderInactiveList(inativos))
+          .catch(error => setStatus(document.querySelector("#orientadores-inativos-status"), error.message, true))
+      : Promise.resolve();
+
+    Promise.all([p1, p2]).then(refreshAnimations);
   }
 
   init();

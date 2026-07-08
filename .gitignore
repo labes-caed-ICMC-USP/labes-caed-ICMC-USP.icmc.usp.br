@@ -1,0 +1,21 @@
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local env
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Documentação interna de desenvolvimento (não publicar no repositório público)
+docs/
+
+# Configuração local do Claude Code
+.claude/
+

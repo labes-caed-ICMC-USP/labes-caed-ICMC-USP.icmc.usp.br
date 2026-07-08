@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "logo": {
+      "href": "/",
+      "src": "/assets/img/education/labes-logo.png",
+      "alt": "LabES"
+    },
+    "links": [
+      { "label": "Início", "href": "/" },
+      { "label": "Manual do Aluno", "href": "/manual-do-aluno/" },
+      { "label": "CAEd", "href": "/caed/" },
+      { "label": "Orientadores", "href": "/orientadores/" }
+    ]
+  },
+  "footer": {
+    "logo": {
+      "href": "/",
+      "src": "/assets/img/education/labes-logo.png",
+      "alt": "LabES"
+    },
+    "telefone": "+55 16 3373-9375",
+    "email": "admin-labes@icmc.usp.br",
+    "endereco": [
+      "Sala 6-204 — Bloco 6, ICMC/USP",
+      "Av. Trabalhador São-Carlense, 400 — Centro",
+      "São Carlos — SP — Brasil"
+    ],
+    "social": [
+      { "icone": "bi-instagram", "href": "https://www.instagram.com/labes.caed.icmc/", "label": "Instagram" },
+      { "icone": "bi-linkedin", "href": "https://www.linkedin.com/company/labes-icmc/", "label": "LinkedIn" }
+    ],
+    "creditos": {
+      "github": "https://github.com/labes-caed-ICMC-USP"
+    }
+  }
+}

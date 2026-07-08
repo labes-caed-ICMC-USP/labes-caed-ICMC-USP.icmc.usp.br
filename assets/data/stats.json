@@ -1,0 +1,14 @@
+{
+  "descricao": "Ao longo dos anos, o Laboratório de Engenharia de Software tem formado e acolhido estudantes de diferentes níveis e modalidades. Os números a seguir apresentam tanto o total de alunos que já passaram pelo laboratório quanto aqueles que participam ativamente das atividades no momento atual.",
+  "concluidos": [
+    { "label": "Mestrados",     "valor": 214, "sufixo": "", "icone": "bi-mortarboard-fill" },
+    { "label": "Doutorados",    "valor": 121, "sufixo": "", "icone": "bi-mortarboard-fill" },
+    { "label": "Pós Doutorados","valor": 24,  "sufixo": "", "icone": "bi-mortarboard-fill" }
+  ],
+  "emAndamento": [
+    { "label": "Iniciações Científicas", "valor": 8,  "sufixo": "+", "icone": "bi-mortarboard-fill" },
+    { "label": "Mestrados",              "valor": 18, "sufixo": "", "icone": "bi-mortarboard-fill" },
+    { "label": "Doutorados",             "valor": 26, "sufixo": "", "icone": "bi-mortarboard-fill" },
+    { "label": "Pós Doutorados",         "valor": 3,  "sufixo": "", "icone": "bi-mortarboard-fill" }
+  ]
+}

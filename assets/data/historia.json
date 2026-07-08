@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "titulo": "Participe do Laboratório de Engenharia de Software",
+    "descricao": "O Laboratório de Engenharia de Software recebe estudantes interessados em aprofundar seus conhecimentos teóricos e práticos, por meio da participação em atividades de pesquisa, desenvolvimento e extensão.",
+    "features": [
+      "Desenvolvimento de projetos acadêmicos e científicos",
+      "Integração entre ensino, pesquisa e extensão",
+      "Participação em eventos, palestras e atividades formativas"
+    ],
+    "cta": {
+      "label": "Mais Informações",
+      "href": "https://www.icmc.usp.br/pos-graduacao/ppgccmc/ingresso"
+    },
+    "galeria": [
+      { "src": "/assets/img/education/bloco6.jpg",    "alt": "Campus Life", "legenda": "Campus Moderno",        "tamanho": "large" },
+      { "src": "/assets/img/education/labes-sala1.jpg","alt": "Students",    "legenda": "Vida Estudantil",      "tamanho": "small" },
+      { "src": "/assets/img/education/labes-sala2.png","alt": "Faculty",     "legenda": "Ambiente Colaborativo","tamanho": "small" }
+    ]
+  },
+  "historia": {
+    "subtitulo": "Nossa História",
+    "titulo": "Consolidação de um grupo dedicado à pesquisa e à formação em Engenharia de Software",
+    "descricao": "O laboratório foi idealizado com o objetivo de consolidar-se como um grupo de excelência na realização de pesquisas associadas à área de Engenharia de Software. Sua criação contou com a iniciativa dos professores Fernão Rodrigues Germano, Paulo Cesar Masiero, José Carlos Maldonado e Rosely Sanches.",
+    "timeline": [
+      {
+        "ano": "1976",
+        "texto": "Defesa da primeira dissertação de mestrado na área no ICMC, com o tema \"Estudo de um Modelo para Descrição, Projeto e Análise da Dinâmica de Sistemas da Informação\", marcando o início das pesquisas em Engenharia de Software na instituição."
+      },
+      {
+        "ano": "1993",
+        "texto": "Criação formal do laboratório, com o apoio e a contribuição do professor precursor no ICMC, Prof. Dr. Odelar Leite Linhares."
+      },
+      {
+        "ano": "1996",
+        "texto": "Conclusão dos primeiros trabalhos de doutorado desenvolvidos no âmbito do laboratório, consolidando sua atuação na pós-graduação."
+      },
+      {
+        "ano": "Dias Atuais",
+        "itens": [
+          "232 dissertações de mestrado concluídas",
+          "129 teses de doutorado defendidas",
+          "29 projetos de pós-doutorado realizados"
+        ]
+      }
+    ],
+    "imagem": {
+      "src": "/assets/img/reencontro-labes.png",
+      "alt": "Atividade institucional do laboratório"
+    },
+    "missao": {
+      "titulo": "Nossa Missão",
+      "texto": "Produzir, evoluir e disseminar conhecimento e inovação nas áreas de Matemática, Ciência da Computação e Estatística, formando recursos humanos em nível de graduação e pós-graduação e promovendo ações de inserção cultural e social."
+    },
+    "visao": {
+      "titulo": "Nossa Visão",
+      "texto": "Tornar-se uma referência nacional e internacional em ensino e pesquisa, contribuindo de forma decisiva para a evolução do conhecimento em suas áreas de atuação, formando recursos humanos de alto nível e apoiando o desenvolvimento científico, tecnológico e social."
+    }
+  },
+  "vidaEstudantil": {
+    "badge": "Vida Estudantil",
+    "titulo": "Integração acadêmica e colaboração no Labes",
+    "descricao": "O Laboratório de Engenharia de Software promove um ambiente colaborativo de aprendizagem, reunindo estudantes que participam tanto de forma presencial quanto online. O espaço estimula a troca de experiências, o desenvolvimento técnico e o fortalecimento da comunidade acadêmica.",
+    "estudantesAtivos": 50,
+    "imagem": {
+      "src": "/assets/img/education/labes-sala2.png",
+      "alt": "Student Life"
+    },
+    "infoGrid": [
+      {
+        "icone": "bi-calendar-event",
+        "titulo": "Eventos ao longo do ano",
+        "texto": "Realização de palestras, rodas de conversa e encontros temáticos voltados à Engenharia de Software e áreas correlatas."
+      },
+      {
+        "icone": "bi-award",
+        "titulo": "Convivência e integração",
+        "texto": "Atividades sociais como festas de Natal e festas juninas, fortalecendo os laços entre estudantes, pesquisadores e colaboradores do laboratório."
+      }
+    ],
+    "destaque": {
+      "src": "/assets/img/education/encontro.jpeg",
+      "alt": "Encontro acadêmico no laboratório",
+      "titulo": "Convivência Acadêmica",
+      "descricao": "Encontros presenciais e remotos que promovem a integração entre estudantes, docentes e pesquisadores, fortalecendo o ambiente colaborativo e o intercâmbio de experiências acadêmicas."
+    },
+    "atividades": [
+      {
+        "src": "/assets/img/education/encontro2.png",
+        "alt": "Atividades de pesquisa",
+        "titulo": "Atividades de Pesquisa",
+        "descricao": "Participação ativa dos estudantes em projetos científicos, grupos de estudo e discussões técnicas relacionadas à Engenharia de Software."
+      },
+      {
+        "src": "/assets/img/education/labes-sala1.jpg",
+        "alt": "Ambiente de estudo no laboratório",
+        "titulo": "Ambiente Colaborativo",
+        "descricao": "Espaços compartilhados que incentivam o trabalho em equipe, a troca de conhecimento e o desenvolvimento acadêmico e profissional."
+      },
+      {
+        "src": "/assets/img/education/festa-junina.png",
+        "alt": "Atividade de integração social",
+        "titulo": "Integração Social",
+        "descricao": "Atividades culturais e comemorativas que fortalecem os vínculos entre os membros do laboratório."
+      }
+    ]
+  },
+  "icmc": {
+    "titulo": "Sobre o ICMC",
+    "paragrafos": [
+      "O Instituto de Ciências Matemáticas e de Computação (ICMC) da Universidade de São Paulo (USP) é uma das mais importantes instituições brasileiras nas áreas de Ciência da Computação, Matemática, Matemática Aplicada e Estatística.",
+      "Nossa missão é produzir, desenvolver e disseminar conhecimento e inovação nas áreas de Matemática, Ciência da Computação e Estatística, formar recursos humanos em nível de graduação e pós-graduação e promover ações de inserção cultural e social. Essa missão se define pelo compromisso com a necessidade de evolução social, científica e tecnológica na região de São Carlos, no estado de São Paulo e no Brasil.",
+      "A visão do ICMC é tornar-se uma referência mundial em ensino e pesquisa, contribuindo decisivamente para a evolução do conhecimento em suas áreas de atuação, formando recursos humanos de alto nível e apoiando o desenvolvimento científico, tecnológico e social da região, do estado e do país."
+    ],
+    "imagem": {
+      "src": "/assets/img/education/icone-noticia.jpg",
+      "alt": "Education"
+    },
+    "badge": "Excelência Comprovada"
+  }
+}
