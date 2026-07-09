@@ -111,15 +111,22 @@ Em **Settings → Pages**, confirme que **Custom domain** está configurado e **
 
 ---
 
-## SEO
+## SEO e Google Search Console
 
-O `sitemap.xml` e o `robots.txt` já apontam para `https://www.labes.icmc.usp.br`.
+O `sitemap.xml`, o `robots.txt`, os canonicals, os metadados Open Graph/Twitter e os dados estruturados apontam para `https://www.labes.icmc.usp.br`.
 
-Para cadastrar no Google Search Console:
+Para configurar no Google Search Console:
 
 1. Acesse o [Google Search Console](https://search.google.com/search-console) e adicione a propriedade `https://www.labes.icmc.usp.br`
-2. Verifique a propriedade via meta tag no `<head>` da `index.html`
+2. Verifique a propriedade via DNS, se possível. Se usar verificação por meta tag, adicione a tag fornecida pelo Google ao `<head>` da `index.html`
 3. Em **Sitemaps**, envie `sitemap.xml`
+4. Em **Inspeção de URL**, teste a URL publicada e solicite indexação das URLs canônicas:
+   - `https://www.labes.icmc.usp.br/`
+   - `https://www.labes.icmc.usp.br/manual-do-aluno/`
+   - `https://www.labes.icmc.usp.br/caed/`
+   - `https://www.labes.icmc.usp.br/orientadores/`
+5. No relatório de páginas indexadas, acompanhe URLs antigas como `/index.php`, `/orientadores.html`, `/students-life.html` e `/news.html`. Elas devem desaparecer gradualmente do índice depois que o Google recrawlear o domínio.
+6. Use o [Rich Results Test](https://search.google.com/test/rich-results) para validar os dados estruturados depois do deploy.
 
 > As páginas `/orientadores/` e `/orientador/` montam conteúdo via JavaScript. O Google renderiza JS, mas se for necessário garantir indexação dos perfis, considere pré-renderização estática.
 
