@@ -1,0 +1,77 @@
+name: Monitor do site
+
+on:
+  schedule:
+    - cron: '0 11 * * *' # diariamente às 11:00 UTC (08:00 em Brasília)
+  workflow_dispatch: # permite rodar manualmente na aba Actions
+
+permissions:
+  issues: write
+
+env:
+  URL: https://www.labes.icmc.usp.br/
+  LABEL: site-fora-do-ar
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar o site
+        id: check
+        run: |
+          # --retry evita alarme falso por instabilidade momentânea de rede
+          status=$(curl -s -o /dev/null -w "%{http_code}" \
+            --max-time 30 --retry 2 --retry-delay 20 --retry-all-errors \
+            "$URL" || true)
+          status=${status:-000}
+          echo "Código HTTP: $status"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          if [ "$status" -ge 200 ] && [ "$status" -lt 400 ]; then
+            echo "up=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "up=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Abrir ou atualizar issue (site fora do ar)
+        if: steps.check.outputs.up == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS: ${{ steps.check.outputs.status }}
+        run: |
+          gh label create "$LABEL" --repo "$GITHUB_REPOSITORY" \
+            --color D93F0B --description "Alerta automático de monitoramento" 2>/dev/null || true
+
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" \
+            --label "$LABEL" --state open --json number --jq '.[0].number')
+
+          body="A verificação automática falhou em $(date -u '+%d/%m/%Y às %H:%M UTC').
+
+          Código HTTP recebido: \`$STATUS\` (000 = sem resposta do servidor).
+
+          Log da execução: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+          if [ -z "$existing" ]; then
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "⚠️ O site $URL está fora do ar" \
+              --label "$LABEL" \
+              --body "$body"
+          else
+            gh issue comment "$existing" --repo "$GITHUB_REPOSITORY" \
+              --body "Site continua fora do ar. $body"
+          fi
+
+      - name: Fechar issue (site voltou ao ar)
+        if: steps.check.outputs.up == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --repo "$GITHUB_REPOSITORY" \
+            --label "$LABEL" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue close "$existing" --repo "$GITHUB_REPOSITORY" \
+              --comment "✅ O site voltou ao ar em $(date -u '+%d/%m/%Y às %H:%M UTC'). Fechando automaticamente."
+          fi
+
+      - name: Marcar a execução como falha se o site estiver fora do ar
+        if: steps.check.outputs.up == 'false'
+        run: exit 1
