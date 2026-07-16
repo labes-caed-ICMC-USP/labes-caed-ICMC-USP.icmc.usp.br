@@ -1,4 +1,4 @@
-name: Monitor do site
+name: status-site-labes
 
 on:
   schedule:
